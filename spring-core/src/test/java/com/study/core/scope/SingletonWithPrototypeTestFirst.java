@@ -1,6 +1,7 @@
 package com.study.core.scope;
 
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Scope;
 
@@ -30,19 +31,20 @@ class SingletonWithPrototypeFirstTest {
         assertThat(clientBeanFirst.logic()).isEqualTo(1);
 
         ClientBean clientBeanSecond = applicationContext.getBean(ClientBean.class);
-        assertThat(clientBeanSecond.logic()).isEqualTo(2);
+        assertThat(clientBeanSecond.logic()).isEqualTo(1);
     }
 
     @Scope("singleton")
     static class ClientBean {
 
-        private final PrototypeBean prototypeBean;
+        private ObjectProvider<PrototypeBean> prototypeBeanObjectProvider;
 
-        public ClientBean(PrototypeBean prototypeBean) {
-            this.prototypeBean = prototypeBean;
+        public ClientBean(ObjectProvider<PrototypeBean> prototypeBeanObjectProvider) {
+            this.prototypeBeanObjectProvider = prototypeBeanObjectProvider;
         }
 
         public int logic() {
+            PrototypeBean prototypeBean = prototypeBeanObjectProvider.getObject();
             prototypeBean.addCount();
             return prototypeBean.getCount();
         }
