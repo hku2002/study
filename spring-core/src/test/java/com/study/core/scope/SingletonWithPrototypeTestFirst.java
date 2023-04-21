@@ -37,7 +37,7 @@ class SingletonWithPrototypeFirstTest {
     @Scope("singleton")
     static class ClientBean {
 
-        private ObjectProvider<PrototypeBean> prototypeBeanObjectProvider;
+        private final ObjectProvider<PrototypeBean> prototypeBeanObjectProvider;
 
         public ClientBean(ObjectProvider<PrototypeBean> prototypeBeanObjectProvider) {
             this.prototypeBeanObjectProvider = prototypeBeanObjectProvider;
