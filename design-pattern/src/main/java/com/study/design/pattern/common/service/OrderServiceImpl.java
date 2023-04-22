@@ -1,6 +1,6 @@
-package com.study.design.pattern.service;
+package com.study.design.pattern.common.service;
 
-import com.study.design.pattern.domain.Order;
+import com.study.design.pattern.common.domain.Order;
 import org.springframework.stereotype.Service;
 
 @Service

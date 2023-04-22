@@ -1,4 +1,4 @@
-package com.study.design.pattern.domain;
+package com.study.design.pattern.common.domain;
 
 import lombok.AccessLevel;
 import lombok.Builder;
