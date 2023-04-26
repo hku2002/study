@@ -1,6 +1,5 @@
 package com.study.design.pattern.common.domain;
 
-import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
