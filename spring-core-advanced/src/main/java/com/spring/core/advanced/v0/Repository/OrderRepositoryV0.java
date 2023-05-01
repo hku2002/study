@@ -3,8 +3,6 @@ package com.spring.core.advanced.v0.Repository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 
-import javax.swing.*;
-
 @Repository
 @RequiredArgsConstructor
 public class OrderRepositoryV0 {
