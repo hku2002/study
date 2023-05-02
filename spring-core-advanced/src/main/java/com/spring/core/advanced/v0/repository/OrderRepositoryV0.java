@@ -1,4 +1,4 @@
-package com.spring.core.advanced.v0.Repository;
+package com.spring.core.advanced.v0.repository;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;

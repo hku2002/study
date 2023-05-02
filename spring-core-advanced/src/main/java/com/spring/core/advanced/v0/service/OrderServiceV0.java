@@ -1,6 +1,6 @@
 package com.spring.core.advanced.v0.service;
 
-import com.spring.core.advanced.v0.Repository.OrderRepositoryV0;
+import com.spring.core.advanced.v0.repository.OrderRepositoryV0;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

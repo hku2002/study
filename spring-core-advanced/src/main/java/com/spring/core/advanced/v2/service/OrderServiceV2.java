@@ -3,7 +3,7 @@ package com.spring.core.advanced.v2.service;
 import com.spring.core.advanced.trace.TraceId;
 import com.spring.core.advanced.trace.TraceStatus;
 import com.spring.core.advanced.trace.hellotrace.HelloTraceV2;
-import com.spring.core.advanced.v2.Repository.OrderRepositoryV2;
+import com.spring.core.advanced.v2.repository.OrderRepositoryV2;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

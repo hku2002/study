@@ -1,10 +1,8 @@
 package com.spring.core.advanced.v3.service;
 
-import com.spring.core.advanced.trace.TraceId;
 import com.spring.core.advanced.trace.TraceStatus;
-import com.spring.core.advanced.trace.hellotrace.HelloTraceV2;
 import com.spring.core.advanced.trace.logtrace.LogTrace;
-import com.spring.core.advanced.v3.Repository.OrderRepositoryV3;
+import com.spring.core.advanced.v3.repository.OrderRepositoryV3;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
