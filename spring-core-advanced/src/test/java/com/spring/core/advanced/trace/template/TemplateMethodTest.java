@@ -57,7 +57,7 @@ class TemplateMethodTest {
         };
         template1.execute();
 
-        AbstractTemplate template2= new AbstractTemplate() {
+        AbstractTemplate template2 = new AbstractTemplate() {
             @Override
             protected void call() {
                 log.info("비즈니스 로직2 실행");
