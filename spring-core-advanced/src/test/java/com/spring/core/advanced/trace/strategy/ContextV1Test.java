@@ -1,6 +1,7 @@
 package com.spring.core.advanced.trace.strategy;
 
 import com.spring.core.advanced.trace.strategy.code.strategy.ContextV1;
+import com.spring.core.advanced.trace.strategy.code.strategy.Strategy;
 import com.spring.core.advanced.trace.strategy.code.strategy.StrategyLogic1;
 import com.spring.core.advanced.trace.strategy.code.strategy.StrategyLogic2;
 import lombok.extern.slf4j.Slf4j;
@@ -47,5 +48,19 @@ class ContextV1Test {
         StrategyLogic2 strategyLogic2 = new StrategyLogic2();
         ContextV1 contextV2 = new ContextV1(strategyLogic2);
         contextV2.execute();
+    }
+
+    /**
+     * 전략 패턴 익명 내부 클래스 사용
+     */
+    @Test
+    void strategyV2() {
+        Strategy strategyLogic1 = () -> log.info("비즈니스 로직 1");
+        ContextV1 context1 = new ContextV1(strategyLogic1);
+        context1.execute();
+
+        Strategy strategyLogic2 = () -> log.info("비즈니스 로직 2");
+        ContextV1 context2 = new ContextV1(strategyLogic2);
+        context2.execute();
     }
 }
